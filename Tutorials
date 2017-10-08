@@ -1,0 +1,111 @@
+                              Git Hub Getting Started
+yum install git
+git --help
+git --version
+git config --global user.name "manishpoddar"
+git config --global user.email "manishkrpoddar@outlook.com"
+git config --syatem core.editor "/bin/vi"
+cat /etc/gitconfig
+git config --system my.editing "/bin/false"
+
+                          Creating Local Repository
+mkdir repo
+cd repo
+git init .
+rm -rf .git
+echo "This is a Read me file " > README.MD
+echo "This is a valid c source file " > source
+echo status
+git config user.name "user"
+git config user.email "user@example.com"
+git add .
+got add *
+echo "testing file" > text.txt
+git add test.txt
+git commit -m "This is the initial commit of files to our project"
+git status
+vi README.MD
+git status
+git commit -a
+git add .
+git commit -m "New text version"
+mkdir new
+mkdir new1
+echo "test1" > new/new.txt
+git add .
+git commit -m "adding directory"
+git rm test2.txt
+git status
+git commit -m "adding directories"
+git rm test2.txt
+git commit -m "Remove a file"
+
+
+                              Loging
+ git log
+ git log --online
+ git log -p
+ git log --test.txt
+ git log --online -- test.txt
+ git log --author = "manishpoddar"
+ git log --grep = "change"
+ git log --graph
+ git log --graph --decorate
+ man git log
+ 
+ 
+                                  Cloning
+ 
+ mkdir workingdir
+ git clone /home/usr/repo
+ vi test.txt
+ git config user.name "manish"
+ git config user.email "manishkrpoddar@outlook.com"
+ git add .
+ git clone user@manuh.com:repo
+ mkdir github
+ git clone <url>
+ git push origin master
+      
+                                    Ignoring Content
+                                    
+  echo "newfile" > newfile.txt
+  git config --global core.excludes file
+  git config --global core.excludes '/etc/gitignore'
+  sudo vim /etc/gitignore
+  #globally ignore file
+  *.out
+  git status
+  cp source.c source.out
+  cp source.c newout.out
+  
+  
+                                Branching
+  git status
+  git branch
+  git branch dev
+  git checkout dev
+  git branch
+  git checkout master
+  git checkout dev
+  mkdir branching
+  cd branching
+  git status
+  git checkout -b branch
+  echo "123" >newfile.txt
+  git checkout -b qa
+  
+  
+                              merging & Pushing
+                              
+                              
+                              
+ git branch
+ git push origin master
+ git checkout dev
+ git push origin dev
+ git merge dev
+ git merge qa
+ git push origin master
+ 
+ 
